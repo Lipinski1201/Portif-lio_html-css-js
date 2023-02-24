@@ -1,21 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    padding: 0px;
-    margin: 0px;
+
+/*Tirei essa parte do #header pra poder ser usado em mais lugares, sempre que quiser mudar a cor vai precisar mudar só aqui*/
+.bg-darker{
+    background: rgba(0, 0, 0, 0.09);
+}
+
+body {
     font-family: "Poppins", sans-serif;
     background: #11998E;
     background: linear-gradient(to right, #38EF7D, #11998E);
- 
+    background: -webkit-linear-gradient(to right, #38EF7D, #11998E);
 }
-#header{
+
+#header {
     position: relative;
     width: 100%;
-    background: rgba(0, 0, 0, 0.09);
-    height: 100px;
+}
+
+.logo {
+    color: #191970;
+}
+
+/* Deixa tudo centralizado no meio da pagina */
+.container {
+    margin: auto;
+    max-width: 1280px;
+}
+
+html {
+    /* Quando tu aperta num link a pagina desce ou sobre mais bonitinho */
+    scroll-behavior: smooth;
+}
+
+/*Centraliza e espaça os elementos dentro com flex containers */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+main{
+    /*Coloca a tag main pra pegar no minimo a tela inteira, jogando o footer la pra baixo*/
+    min-height: 100vh;
+}
+
+/* Todas as sections vao ter uma margem em cima e embaixo, só ir criando elas conforme desejado */
+section{
+    margin: 2rem 0rem;
+}
+
+/*Faz o mesmo que o nav mas com a section dentro do footer*/
+footer > section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
 }
